@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver" />
+                <!-- mysql8以上版本，不加?serverTimezone=GMT，会提示系统时区出现错误 -->
+                <property name="url" value="jdbc:mysql://localhost:3306/architect?serverTimezone=GMT" />
+                <property name="username" value="root" />
+                <property name="password" value="root" />
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="mybatis/usersMapper.xml"/>
+    </mappers>
+</configuration>
