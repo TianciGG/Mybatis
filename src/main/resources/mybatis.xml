@@ -14,6 +14,8 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="mybatis/usersMapper.xml"/>
+        <!-- <mapper resource="mybatis/usersMapper.xml"/> -->
+        <mapper resource="mybatis/usersTableMapper.xml"/>
+        <mapper class="chauncy.mapper.UsersMapper"/>
     </mappers>
 </configuration>

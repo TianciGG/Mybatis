@@ -2,6 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="chauncy.mapper.UsersMapper">
 	<select id="getUsers" parameterType="int" resultType="chauncy.entity.Users">
-	   select * from users where id = #{id}
+	   select * from users where id = #{id};
 	</select>
+	
+	<insert id="addUsers" parameterType="chauncy.entity.Users"> 
+	   insert into users(name,age) values(#{name},#{age});
+	</insert>
+	
+	<delete id="delUsers" parameterType="int">
+	   delete from users where id = #{id};
+	</delete>
+	
+	<update id="updUsers" parameterType="chauncy.entity.Users">
+	   update users set name=#{name},age=#{age} where id = #{id};
+	</update>
+	
 </mapper>

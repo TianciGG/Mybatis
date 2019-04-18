@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="chauncy.mapper.UsersTableMapper">
+    <select id="login" parameterType="chauncy.entity.UsersTable" resultType="chauncy.entity.UsersTable">
+       select * from users_table where username=${userName} and password=${passWord}
+    </select>
+    
+    
+</mapper>
